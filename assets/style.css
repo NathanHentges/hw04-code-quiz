@@ -1,5 +1,6 @@
 :root {
   --timing: 0.1s;
+  --slow-timing: 1s;
 }
 
 * {
@@ -32,6 +33,11 @@ a {
 
 a:visited {
   color: inherit;
+}
+
+main {
+  background-color: white;
+  transition: var(--slow-timing);
 }
 
 /* Button */
@@ -141,17 +147,17 @@ section {
 }
 
 #question-container {
-  transition: 0.2s;
+  transition: var(--slow-timing);
 }
 
 .wrong-answer {
   background-color: #ff85856c;
-  transition: 0.2s;
+  transition: var(--slow-timing);
 }
 
 .right-answer {
   background-color: #81ff816c;
-  transition: 0.2s;
+  transition: var(--slow-timing);
 }
 
 .not-allowed {

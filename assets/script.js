@@ -80,7 +80,6 @@ function backClick() {
 }
 function clearClick() {
   localStorage.clear();
-  console.log(localStorage);
   showScores();
 }
 function viewHsClick() {
@@ -108,7 +107,7 @@ function runTimer() {
       // Time ran out
       gameOver();
     }
-  }, 100);
+  }, 1000);
 }
 
 function showScores() {
@@ -150,7 +149,7 @@ function questionAnswered(choice) {
   }
   setTimeout(function() {
     mainEl.classList.remove("wrong-answer", "right-answer");
-  }, 300);
+  }, 1000);
   hideEl(questionCards.children[currentQuestion]);
   if (currentQuestion >= questionCards.childElementCount - 1) {
     // No more questions
