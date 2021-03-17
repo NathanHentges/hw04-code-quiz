@@ -6,16 +6,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="assets/style.css">
+  <link rel="icon" href="data:,">
   <title>Code Quiz</title>
 </head>
 
 <body>
   <header>
     <a id="view-hs" href="">View highscores</a>
-    <h2>Time: <span>60</span></h2>
+    <h2>Time: <span id="time-left">60</span></h2>
   </header>
 
-  <main>
+  <main id="main">
     <section id="start" class="start-card">
       <h1>Welcome to the coding quiz</h1>
       <p>Here is a description of what you will do</p>
@@ -26,37 +27,37 @@
       <section class="question-card hidden">
         <!-- <form> -->
           <h1>What is something you should always have open while debugging javascript?</h1>
-          <button>1. A cat picture</button>
-          <button data-correct="true">2. Console</button>
-          <button>3. Cookie jar</button>
-          <button>4. Interdimensional portals</button>
+          <button class="question-button">1. A cat picture</button>
+          <button class="question-button" data-correct="true">2. Console</button>
+          <button class="question-button">3. Cookie jar</button>
+          <button class="question-button">4. Interdimensional portals</button>
         <!-- </form> -->
       </section>
       <section class="question-card hidden">
         <!-- <form> -->
           <h1>Question Title</h1>
-          <button>1. answer</button>
-          <button>2. answer</button>
-          <button data-correct="true">3. answer</button>
-          <button>4. answer</button>
+          <button class="question-button">1. answer</button>
+          <button class="question-button">2. answer</button>
+          <button class="question-button" data-correct="true">3. Answer</button>
+          <button class="question-button">4. answer</button>
         <!-- </form> -->
       </section>
       <section class="question-card hidden">
         <!-- <form> -->
           <h1>Question Title</h1>
-          <button>1. answer</button>
-          <button>2. answer</button>
-          <button>3. answer</button>
-          <button data-correct="true">4. answer</button>
+          <button class="question-button">1. answer</button>
+          <button class="question-button">2. answer</button>
+          <button class="question-button">3. answer</button>
+          <button class="question-button" data-correct="true">4. Answer</button>
         <!-- </form> -->
       </section>
       <section class="question-card hidden">
         <!-- <form> -->
           <h1>Question Title</h1>
-          <button data-correct="true">1. answer</button>
-          <button>2. answer</button>
-          <button>3. answer</button>
-          <button>4. answer</button>
+          <button class="question-button" data-correct="true">1. Answer</button>
+          <button class="question-button">2. answer</button>
+          <button class="question-button">3. answer</button>
+          <button class="question-button">4. answer</button>
         <!-- </form> -->
       </section>
     </div>
@@ -66,15 +67,14 @@
       <p>Your score is <span id="quiz-score">20</span></p>
       <form id="submit-hs">
         <label for="name-hs">Submit initials:</label>
-        <textarea name="name-hs" id="name-hs"></textarea>
+        <textarea name="name-hs" id="name-hs" maxlength="2"></textarea>
         <button id="hs-submit">Submit</button>
       </form>
     </section>
 
     <section id="highscores" class="highscore-card hidden">
       <h1>Highscores</h1>
-      <div class="highscore-list">
-        <div class="user-score">1. BB 20</div>
+      <div id="highscore-list" class="highscore-list">
       </div>
       <div class="flex-container">
         <button id="hs-back">Back</button>

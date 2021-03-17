@@ -90,22 +90,11 @@ section {
   margin: 15px auto 0px auto;
 }
 
-/* question section formatting */
-.question-card {
 
-}
-
-.question-card button {
-  
-}
 
 .question-card p {
   color: #5f5f5f;
   font-style: italic;
-}
-
-.gameover-card {
-
 }
 
 .gameover-card form {
@@ -125,6 +114,7 @@ section {
   resize: none;
   height: 25px;
   margin: 0 5px;
+  
 }
 
 .highscore-list {
@@ -135,10 +125,35 @@ section {
 .user-score {
   background-color: #518edd71;
   padding: 2px;
+  padding-left: 10px;
+}
+
+.alt-user-score {
+  background-color: #456fd29c;
+  padding: 2px;
+  padding-left: 10px;
 }
 
 .flex-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+}
+
+#question-container {
+  transition: 0.2s;
+}
+
+.wrong-answer {
+  background-color: #ff85856c;
+  transition: 0.2s;
+}
+
+.right-answer {
+  background-color: #81ff816c;
+  transition: 0.2s;
+}
+
+.not-allowed {
+  cursor: not-allowed;
 }
