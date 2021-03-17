@@ -21,7 +21,7 @@ var quizScore = document.getElementById("quiz-score");
 
 // Global variables
 
-const timeAllowed = 60;
+const timeAllowed = 30;
 
 var gameRunning = false;
 
@@ -135,6 +135,9 @@ function showEl(elem) {
 function questionAnswered(choice) {
   if (! choice.dataset.correct) {
     mainEl.classList.add("wrong-answer");
+    setTimeout(function() {
+      mainEl.classList.remove("wrong-answer");
+    }, 500);
     currentScore -= 10;
     if (currentScore <= 0) {
       currentScore = 0;
@@ -146,10 +149,11 @@ function questionAnswered(choice) {
   } else {
     // Correct choice
     mainEl.classList.add("right-answer");
+    setTimeout(function() {
+      mainEl.classList.remove("right-answer");
+    }, 500);
   }
-  setTimeout(function() {
-    mainEl.classList.remove("wrong-answer", "right-answer");
-  }, 1000);
+  
   hideEl(questionCards.children[currentQuestion]);
   if (currentQuestion >= questionCards.childElementCount - 1) {
     // No more questions
@@ -165,6 +169,7 @@ function questionAnswered(choice) {
 
 // Main quiz logic                      ==================
 function startQuiz() {
+  mainEl.classList.remove("wrong-answer", "right-answer");
   gameRunning = true;
   viewHs.classList.add("not-allowed");
   runTimer();

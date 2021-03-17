@@ -1,6 +1,6 @@
 :root {
   --timing: 0.1s;
-  --slow-timing: 1s;
+  --slow-timing: 0.5s;
 }
 
 * {
