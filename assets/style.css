@@ -1,0 +1,144 @@
+:root {
+  --timing: 0.1s;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Verdana, sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  font-size: 2em;
+  padding: 15px;
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+}
+
+p {
+  font-size: 1em;
+  margin-left: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+}
+
+/* Button */
+button {
+  color: white;
+  background-color: #023f78;
+  border: 2px solid black;
+  border-radius: 8px;
+  padding: 5px;
+  margin: 5px;
+  font-family: sans-serif;
+  font-size: 1.1em;
+  transition: var(--timing);
+  display: block;
+}
+
+button:hover {
+  box-shadow: 0 0 3px black;
+  filter: brightness(120%);
+  transition: var(--timing);
+}
+
+button:active {
+  border-color: #318bdf;
+  filter: brightness(110%);
+  transition: var(--timing);
+}
+
+/* Header */
+header {
+  margin: 0;
+  padding: 30px 10%;
+  background-color: #387eff;
+  color: white;
+  font-weight: 600;
+  font-size: 1.1em;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+
+.hidden {
+  display: none;
+}
+
+section {
+  width: 50%;
+  background-color: #387eff28;
+  margin: 20px auto;
+  padding: 15px;
+}
+
+.start-card button{
+  margin: 15px auto 0px auto;
+}
+
+/* question section formatting */
+.question-card {
+
+}
+
+.question-card button {
+  
+}
+
+.question-card p {
+  color: #5f5f5f;
+  font-style: italic;
+}
+
+.gameover-card {
+
+}
+
+.gameover-card form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: center;
+  height: 35px;
+  
+}
+.gameover-card form button {
+  margin: 0 5px;
+  font-size: .95em;
+  padding: 2px 5px;
+}
+.gameover-card form textarea {
+  resize: none;
+  height: 25px;
+  margin: 0 5px;
+}
+
+.highscore-list {
+  display: block;
+  margin: 0 auto 10px auto;
+}
+
+.user-score {
+  background-color: #518edd71;
+  padding: 2px;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
